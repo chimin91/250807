@@ -59,4 +59,36 @@ career_dict = {
         "reason": "섬세하고 헌신적인 ISFJ는 남을 도와주는 분야에서 안정감 있게 일할 수 있어요. 🤗"
     },
     "ESTJ": {
-        "career": ["경영자 🏢", "군인]()
+        "career": ["경영자 🏢", "군인 🪖"],
+        "reason": "현실적이고 계획적인 ESTJ는 조직을 관리하고 체계적으로 일하는 것을 잘해요. 📅"
+    },
+    "ESFJ": {
+        "career": ["간호사 🩺", "서비스 매니저 🛎️"],
+        "reason": "다정하고 친절한 ESFJ는 타인의 감정을 잘 읽고 봉사 정신이 강해요. 🫶"
+    },
+    "ISTP": {
+        "career": ["엔지니어 ⚙️", "파일럿 ✈️"],
+        "reason": "실용적이고 탐구적인 ISTP는 기술과 기계를 다루는 분야에서 큰 강점을 보여요. 🛠️"
+    },
+    "ISFP": {
+        "career": ["패션 디자이너 👗", "플로리스트 🌸"],
+        "reason": "감각적이고 유연한 ISFP는 예술과 감성 표현이 필요한 분야에 어울려요. 🎨"
+    },
+    "ESTP": {
+        "career": ["영업 전문가 💼", "스포츠 코치 🏋️"],
+        "reason": "즉흥적이고 에너지 넘치는 ESTP는 활동적인 환경에서 빛을 발해요. ⚡"
+    },
+    "ESFP": {
+        "career": ["연예인 🎤", "이벤트 플래너 🎉"],
+        "reason": "사교적이고 긍정적인 ESFP는 사람들과 어울리며 즐거움을 나누는 데 뛰어납니다. 🌟"
+    }
+}
+
+# 결과 보여주기
+if mbti:
+    st.markdown("## 🎯 추천 진로")
+    for job in career_dict[mbti]["career"]:
+        st.markdown(f"- {job}")
+    
+    st.markdown("## 📝 추천 이유")
+    st.write(career_dict[mbti]["reason"])
